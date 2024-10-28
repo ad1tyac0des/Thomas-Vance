@@ -9,11 +9,12 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+// Prevent Right Click
 document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
 
-// Animation Code
+// Image Animation
 const elems = document.querySelectorAll(".elem");
 elems.forEach((elem) => {
     const image = elem.querySelector("img");
@@ -81,3 +82,12 @@ function colorAnimation() {
 }
 
 colorAnimation();
+
+// Cursor Animation
+document.addEventListener('mousemove', (e) => {
+    gsap.to(".custom-cursor", {
+        left: e.clientX,
+        top: e.clientY,
+        ease: 'expo.out',
+    })
+})
