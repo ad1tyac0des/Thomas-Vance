@@ -84,6 +84,10 @@ function colorAnimation() {
 colorAnimation();
 
 // Cursor Animation
+gsap.set(".custom-cursor", {
+    display: window.innerWidth > 768 ? 'block' : 'none',
+})
+
 document.addEventListener('mousemove', (e) => {
     gsap.to(".custom-cursor", {
         left: e.clientX,
