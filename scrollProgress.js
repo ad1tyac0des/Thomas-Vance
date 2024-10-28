@@ -25,7 +25,6 @@ function scrollProgress() {
     progressContainer.addEventListener('mousedown', (e) => {
         isDragging = true
         startY = e.clientY
-        progressContainer.style.cursor = 'grabbing'
         e.preventDefault()
     })
 
@@ -46,7 +45,6 @@ function scrollProgress() {
 
     document.addEventListener('mouseup', () => {
         isDragging = false
-        progressContainer.style.cursor = 'grab'
     })
 
     progressContainer.addEventListener('dragstart', (e) => {

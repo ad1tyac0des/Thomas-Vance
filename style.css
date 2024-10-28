@@ -22,7 +22,6 @@ body{
 }
 
 .progress-container {
-    cursor: grab;
     user-select: none;
 }
 
@@ -32,6 +31,14 @@ body{
 
 .custom-cursor {
     transform: translate(-50%, -50%);
+    transition: width .4s, height .4s, background-color .4s, mix-blend-mode .4s;
+}
+
+.main-container:has(.progress-container:hover) .custom-cursor{
+    width: .7rem;
+    height: .7rem;
+    background-color: var(--bg-color);
+    mix-blend-mode: normal;
 }
 
 .main-container:has(.para:hover) .custom-cursor{
