@@ -1,10 +1,9 @@
 ::selection {
-    background-color: #e4e4e4;
+    background-color: var(--bg-color);
     color: #111;
 }
 
 body{
-    user-select: none;
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -21,4 +20,8 @@ body{
 .progress-container {
     cursor: grab;
     user-select: none;
+}
+
+.para .word:hover {
+    background-color: var(--bg-color);
 }

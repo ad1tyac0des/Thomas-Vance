@@ -51,3 +51,33 @@ elems.forEach((elem) => {
             0
         );
 });
+
+// Color Animation on Para
+function colorAnimation() {
+    const para = document.querySelector(".para");
+    para.innerHTML = para.textContent.split(" ")
+        .map(word => `<span class='word'>${word}</span>`)
+        .join(" ");
+
+    let hue = 0;
+    const hueIncrement = 0.1;
+
+    function generateColor(hue) {
+        return `hsl(${hue}, 90%, 70%)`;
+    }
+
+    function getNextColor() {
+        hue = (hue + hueIncrement) % 360;
+        return generateColor(hue);
+    }
+
+    function animate() {
+        const color = getNextColor();
+        document.documentElement.style.setProperty('--bg-color', color);
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+colorAnimation();
