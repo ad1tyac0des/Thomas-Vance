@@ -1,0 +1,24 @@
+::selection {
+    background-color: #e4e4e4;
+    color: #111;
+}
+
+body{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.grid .elem {
+    grid-row: var(--r);
+    grid-column: var(--c);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.progress-container {
+    cursor: grab;
+    user-select: none;
+}
