@@ -4,7 +4,7 @@
 }
 
 body {
-    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiMzMzMzMzMiIC8+PC9zdmc+'), auto;
+    cursor: none;
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -31,7 +31,7 @@ body {
     transition: width .4s, height .4s, background-color .4s, mix-blend-mode .4s;
 }
 
-.main-container:has(.progress-container:hover) .custom-cursor {
+.main-container:has(.main-progress-container:hover) .custom-cursor {
     background-color: var(--bg-color);
     mix-blend-mode: normal;
 }

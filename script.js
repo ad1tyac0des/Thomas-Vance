@@ -92,7 +92,7 @@ document.addEventListener('mousemove', (e) => {
     const progressBar = document.querySelector('.progress-container')
     const rect = progressBar.getBoundingClientRect()
 
-    if (Math.abs(e.clientX - rect.left) < 100 && e.clientY > rect.top && e.clientY < rect.bottom){
+    if (Math.abs(e.clientX - rect.left) < 40 && e.clientY > rect.top && e.clientY < rect.bottom){
         gsap.to(".custom-cursor", {
             left: rect.left + rect.width/2,
             top: e.clientY,

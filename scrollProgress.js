@@ -1,4 +1,5 @@
 function scrollProgress() {
+    const mainProgressContainer = document.querySelector('.main-progress-container')
     const progressContainer = document.querySelector('.progress-container')
     const progressElement = document.querySelector('.progress')
     let isDragging = false
@@ -9,7 +10,7 @@ function scrollProgress() {
     })
 
     // Add click functionality
-    progressContainer.addEventListener('click', (e) => {
+    mainProgressContainer.addEventListener('click', (e) => {
         const rect = progressContainer.getBoundingClientRect()
         const clickY = e.clientY - rect.top
         const percentage = clickY / rect.height
@@ -22,7 +23,7 @@ function scrollProgress() {
     })
 
     // Add drag functionality
-    progressContainer.addEventListener('mousedown', (e) => {
+    mainProgressContainer.addEventListener('mousedown', (e) => {
         isDragging = true
         startY = e.clientY
         e.preventDefault()
