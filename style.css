@@ -1,13 +1,10 @@
-* {
-    cursor: none;
-}
-
 ::selection {
     background-color: var(--bg-color);
     color: #111;
 }
 
-body{
+body {
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiMzMzMzMzMiIC8+PC9zdmc+'), auto;
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -34,14 +31,12 @@ body{
     transition: width .4s, height .4s, background-color .4s, mix-blend-mode .4s;
 }
 
-.main-container:has(.progress-container:hover) .custom-cursor{
-    width: .7rem;
-    height: .7rem;
+.main-container:has(.progress-container:hover) .custom-cursor {
     background-color: var(--bg-color);
     mix-blend-mode: normal;
 }
 
-.main-container:has(.para:hover) .custom-cursor{
+.main-container:has(.para:hover) .custom-cursor {
     width: .25rem;
     height: .25rem;
 }

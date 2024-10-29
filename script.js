@@ -89,9 +89,20 @@ gsap.set(".custom-cursor", {
 })
 
 document.addEventListener('mousemove', (e) => {
-    gsap.to(".custom-cursor", {
-        left: e.clientX,
-        top: e.clientY,
-        ease: 'expo.out',
-    })
+    const progressBar = document.querySelector('.progress-container')
+    const rect = progressBar.getBoundingClientRect()
+
+    if (Math.abs(e.clientX - rect.left) < 100 && e.clientY > rect.top && e.clientY < rect.bottom){
+        gsap.to(".custom-cursor", {
+            left: rect.left + rect.width/2,
+            top: e.clientY,
+            ease: 'expo.out',
+        })
+    } else{
+        gsap.to(".custom-cursor", {
+            left: e.clientX,
+            top: e.clientY,
+            ease: 'expo.out',
+        })
+    }
 })
